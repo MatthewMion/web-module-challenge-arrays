@@ -46,7 +46,8 @@ Use the copy function below to do the following:
 */
 
 function copy( originalFlavors){
-  return originalFlavors;
+  let copyOriginalFlavors = [...originalFlavors]
+  return copyOriginalFlavors;
   
 }    
 
@@ -173,12 +174,15 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
+const checkArray = [];
+
 function filterByWord(originalFlavors, flavorCheck){
   for( let i = 0;i < originalFlavors.length ;i++){
-    if (originalFlavors[i].includes(flavorCheck))
-   
-    originalFlavors[i]
+    if (originalFlavors[i].includes(flavorCheck)){
+      checkArray.push(originalFlavors[i]);
   }
+}
+  return checkArray;
 }
 
 
